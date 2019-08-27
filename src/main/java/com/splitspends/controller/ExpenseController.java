@@ -1,5 +1,6 @@
 package com.splitspends.controller;
 
+import java.security.Principal;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -21,6 +22,11 @@ public class ExpenseController {
     public Collection<Expense> getExpenses() {
         return repository.findAll().stream()
                 .collect(Collectors.toList());
+    }
+    
+    @GetMapping("/hello")
+    public String sayHello(Principal principal) {
+        return "Hello, " + principal.getName();
     }
 
 }
