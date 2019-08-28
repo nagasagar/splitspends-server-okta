@@ -18,6 +18,7 @@ import java.util.stream.Stream;
 
 @SpringBootApplication
 public class SplitspendsApplication {
+    
 
     public static void main(String[] args) {
 	SpringApplication.run(SplitspendsApplication.class, args);
